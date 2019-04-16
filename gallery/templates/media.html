@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+<h1>Media</h1>
+<ul>
+{% for media in medias %}
+  <li>
+    <p>{{ media.name }}</p>
+    <p>{{ media.description }}</p>
+    <img src="/{{ media.image }}">
+  </li>
+{% empty %}
+  <li>empty</li>
+{% endfor %}
+</ul>
+</body>
+</html>

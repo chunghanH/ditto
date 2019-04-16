@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+<h1>Project</h1>
+<ul>
+{% for project in projects %}
+  <li>
+    <p>{{ project.title }}</p>
+    <p>{{ project.description }}</p>
+    <img src="/{{ project.media_set.first.file }}">
+  </li>
+{% empty %}
+  <li>empty</li>
+{% endfor %}
+</ul>
+</body>
+</html>

@@ -1,0 +1,47 @@
+#install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+#install python
+brew install python
+
+#install virtualenv
+pip3 install virtualenv
+
+#create virtual enviroment
+virtualenv venv
+
+#Windows to virtualenv
+venv\scripts\activate
+
+#OSX to virtualenv
+source venv/bin/activate
+
+#install django
+pip3 install django
+
+#create project
+django-admin startproject project_name
+
+#create application
+python manage.py startapp app_name
+#add applicatoin into settings.py(INSTALLED_APPS)
+
+#make migration
+python manage.py migrate
+python manage.py makemigrations app_name
+
+#CBV Template view
+from django import forms
+from gallery.models import Work
+
+class UploadFileForm(forms.ModelForm):
+    class Meta:
+        model = Work
+        fields = "__all__"
+
+#implement model gets related object(many to one)
+reporters = Reporter.objects.all()
+for reporter in reporters:
+    for article in reporter.article_set.all()
+        print(article.title)
+
