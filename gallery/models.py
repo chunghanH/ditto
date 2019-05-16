@@ -1,7 +1,7 @@
 from django.db import models
 
 def media_upload_to(instance, filename):
-    return 'static/img/gallery/media/{}/{}'.format(instance.project.id, filename)
+    return 'static/gallery/img/media/{}/{}'.format(instance.project.id, filename)
 
 # Create your models here.
 class Project(models.Model):

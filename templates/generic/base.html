@@ -1,0 +1,12 @@
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+{% include "generic/top.html" %}
+</head>
+<body>
+<div id="app" class="container-fluid">
+{% block content %}{% endblock %}
+</div>
+{% include "generic/bottom.html" %}
+</body>
+</html>

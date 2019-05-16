@@ -1,0 +1,24 @@
+{% extends "generic/base.html" %}
+{% block title %}Gallery{% endblock %}
+{% block content %}
+<div class="row" v-if="projects.length">
+  <template v-for="(project, index) in projects">
+    <div class="projectGrid col-sm-6 col-md-4" :seq="project.id" @mouseover="hoverTitle" @mouseleave="hoverTitle">
+    <img class="projectImage" :src="'/' + project.file" @click="getMedia(project.id)">
+    <span class="projectTitle">${ project.title }</span>
+    </div>
+  </template>
+</div>
+<h1 v-else>empty</h1>
+
+<div class="overlayBox" v-if="showMedia" @click="closeOverlay">
+  <div class="row" v-if="media.length">
+    <template v-for="(item, index) in media">
+      <div class="albumGrid col-sm-6 col-md-4">
+        <img class="albumImage" :src="'/' + item.file">
+      </div>
+    </template>
+  </div>
+  <h3  v-else>no Media</h3>
+</div>
+{% endblock %}

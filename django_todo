@@ -45,3 +45,37 @@ for reporter in reporters:
     for article in reporter.article_set.all()
         print(article.title)
 
+#install create-react-app
+npm install -g create-react-app
+create-react-app app_name
+#install react-router-dom
+npm install --save react-router-dom
+＃instal bootstrap
+npm install --save bootstrap
+# install axios
+npm install axios
+
+#Django + React.js + Webpack
+after create django project, create app name frontend
+create react project name templates inside the frontend app
+install router
+install bootstrap
+settings.py set template & static dir
+fronend views.py create entrypoint page mehod
+
+
+
+
+#install webpack
+npm init
+npm install webpack webpack-cli --save-dev
+npm install --save-dev babel-core babel-eslint babel-loader babel-preset-es2015 babel-preset-react
+
+#install babel
+npm install babel-loader @babel/core @babel/preset-env --save-dev
+
+install vue-cli
+npm install -g @vue/cli
+
+
+
